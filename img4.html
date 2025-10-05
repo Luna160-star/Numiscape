@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  (function () {
+    const COIN_ID = "coin4"; // change to coin2 on img2.html, etc.
+    const KEY_READ = "numescape_read";
+    const KEY_COINS = "numescape_coins";
+
+    const read = JSON.parse(localStorage.getItem(KEY_READ) || "{}");
+    if (!read[COIN_ID]) {
+      read[COIN_ID] = true;
+      localStorage.setItem(KEY_READ, JSON.stringify(read));
+      const coins = Number(localStorage.getItem(KEY_COINS) || 0) + 1;
+      localStorage.setItem(KEY_COINS, String(coins));
+    }
+  })();
+</script>
+
+</body>
+</html>

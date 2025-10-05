@@ -9,20 +9,136 @@
 <body>
     <body class="paper-bg">
     <main class="content">
-        <marquee>
      <section="stack">
-        <img src="img1.png" alt="Coin 1" class="coin"/>
-        <img src="img2.png" alt="Coin2" class="coin"/>
-        <img src="img3.png" alt="coin3" class="coin"/>
-        <img src="img4.png" alt="coin4" class="coin"/>
-        <img src="img5.png" alt="coin5" class="coin"/>
-        <img src="img6.png" alt="coin6" class="coin"/>
-        <img src="img7.png" alt="coin7" class="coin"/>
-        <img src="img8.png" alt="coin8" class="coin"/>
+
+         <div class="wallet">
+  <span class="wallet-emoji">🪙</span>
+  <span id="coinCount">0</span>
+  <button id="openWellBtn" class="btn">Toss in Well</button>
+         </div>
+
+       <div id="wellModal" class="well-modal" aria-hidden="true">
+       <div class="well-dialog">
+        <button class="close" id="closeWellBtn" aria-label="Close">✕</button>
+       <div class="well-graphic">
+      <div class="well-mouth"></div>
+      <div class="coin-fall" id="coinAnim">🪙</div>
+    </div>
+    <button id="tossBtn" class="btn primary">Toss 1 coin</button>
+    <p id="factText" class="fact"></p>
+     </div>
+     </div>
+
+
+
+<!---------->
+
+
+        <div class="row">
+            <div class="column">
+                <a href="img1.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 1" class="coin"/> </a>
+            </div>
+
+            <div class="column">
+                <a href="img2.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 2" class="coin"/> </a>
+            </div>
+
+            <div class="column">
+                <a href="img3.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 3" class="coin"/> </a>
+            </div>
+            
+            <div class="column">
+               <a href="img4.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin4" class="coin"/> </a>
+            </div>
+            
+            <div class="column">
+                <a href="img5.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 5" class="coin"/> </a>
+            </div>
+
+            <div class="break"></div>
+
+            <div class="column">
+               <a href="img6.html"><img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 6" class="coin"/> </a>
+            </div>
+
+            <div class="column">
+               <a href="img7.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 7" class="coin"/> </a>
+            </div>
+
+            <div class="column">
+               <a href="img8.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 8" class="coin"/> </a>
+            </div>
+ 
+            <div class="column">
+                <a href="img9.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 9" class="coin"/> </a>
+            </div>
+
+            <div class="column">
+                <a href="img10.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="COin 10" class="coin"/> </a>
+            </div>
+
+
     </section>
-    </marquee>
+
     </main>
     </body>
+
+    <script>
+  (function () {
+    const KEY_COINS = "numescape_coins";
+    const coinCountEl = document.getElementById("coinCount");
+    const wellModal = document.getElementById("wellModal");
+    const openBtn = document.getElementById("openWellBtn");
+    const closeBtn = document.getElementById("closeWellBtn");
+    const tossBtn = document.getElementById("tossBtn");
+    const coinAnim = document.getElementById("coinAnim");
+    const factText = document.getElementById("factText");
+
+    const SPEND_COST = true; // set to false to make tossing free while testing
+
+    const facts = [
+      "Ancient coins often reveal trade routes through their metal sources.",
+      "The first mechanically minted coins appeared in 16th‑century Europe.",
+      "Edge lettering was invented to deter coin clipping fraud.",
+      "Electrum, a natural gold‑silver alloy, was used in early Lydian coins.",
+      "Portraits on coins spread political messages across empires.",
+      "Hammered coinage was standard before screw‑press technology."
+    ];
+
+    function getCoins() { return Number(localStorage.getItem(KEY_COINS) || 0); }
+    function setCoins(n) { localStorage.setItem(KEY_COINS, String(n)); render(); }
+    function render() {
+      coinCountEl.textContent = getCoins();
+      tossBtn.disabled = (getCoins() <= 0 && SPEND_COST);
+    }
+
+    function openWell() { wellModal.classList.add("show"); wellModal.setAttribute("aria-hidden", "false"); }
+    function closeWell() { wellModal.classList.remove("show"); wellModal.setAttribute("aria-hidden", "true"); factText.textContent = ""; coinAnim.classList.remove("drop"); }
+
+    openBtn.addEventListener("click", openWell);
+    closeBtn.addEventListener("click", closeWell);
+    wellModal.addEventListener("click", (e) => { if (e.target === wellModal) closeWell(); });
+
+    tossBtn.addEventListener("click", () => {
+      if (SPEND_COST && getCoins() <= 0) return;
+      if (SPEND_COST) setCoins(getCoins() - 1);
+
+      coinAnim.classList.remove("drop");
+      void coinAnim.offsetWidth; // restart animation
+      coinAnim.classList.add("drop");
+
+      setTimeout(() => {
+        const pick = facts[Math.floor(Math.random() * facts.length)];
+        factText.textContent = pick;
+      }, 900);
+    });
+
+    render();
+  })();
+</script>
+
+
+<b> Helllo everyonee, welcome to Numiscapee!! </b>
 </body>
 </html>
 

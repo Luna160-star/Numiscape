@@ -1,0 +1,7 @@
+<img src="img2.png" alt="Coin2" class="coin"/>
+        <img src="img3.png" alt="coin3" class="coin"/>
+        <img src="img4.png" alt="coin4" class="coin"/>
+        <img src="img5.png" alt="coin5" class="coin"/>
+        <img src="img6.png" alt="coin6" class="coin"/>
+        <img src="img7.png" alt="coin7" class="coin"/>
+        <img src="img8.png" alt="coin8" class="coin"/>
