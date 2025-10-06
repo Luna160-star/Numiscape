@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-  (function () {
-    const COIN_ID = "coin6"; // change to coin2 on img2.html, etc.
-    const KEY_READ = "numescape_read";
-    const KEY_COINS = "numescape_coins";
+   (function () {
+    const COIN_ID = "coin6";
+    const KEY_READ= "numescape_read";
+    const KEY_COINS= "numescape_coins";
 
     const read = JSON.parse(localStorage.getItem(KEY_READ) || "{}");
     if (!read[COIN_ID]) {
@@ -18,18 +18,19 @@
       localStorage.setItem(KEY_READ, JSON.stringify(read));
       const coins = Number(localStorage.getItem(KEY_COINS) || 0) + 1;
       localStorage.setItem(KEY_COINS, String(coins));
-    }
-  })();
+    } 
+
+  }) ();
 </script>
 
-lets talk about our sixthh coin nowww.
+lets talk about our sixthh coin nowww. <br> 
 
-<h1> GOLDE STATER OF CROESUS</h1>
--First widely used and recognized pure gold standard coin, paired with pure silver issues.
--lion and the bull confronting design symbolizes power and prosperity.
--solved electrum valuation problem with fized metal fineness.
--influenced greek and near easter monetary systems.
--a milestone that stablized larger scale commerce.
+<h1> GOLDE STATER OF CROESUS</h1> <br> 
+-First widely used and recognized pure gold standard coin, paired with pure silver issues. <br> 
+-lion and the bull confronting design symbolizes power and prosperity. <br> 
+-solved electrum valuation problem with fized metal fineness. <br> 
+-influenced greek and near easter monetary systems. <br> 
+-a milestone that stablized larger scale commerce. <br>
 
 <h1> </h1>
 </body>
