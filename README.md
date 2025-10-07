@@ -13,7 +13,7 @@ Working featuress:
 1. website connecting
 2. coin acceptance
 3. tossing in the well
-4. 
+4. some cool facts about coin and history!
 
 
 HOPE YOU ALL LIKE MY SITEE <333
