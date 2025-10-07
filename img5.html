@@ -3,34 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coin 5</title>
+    <style>
+      h2{
+        font-size: 25px;
+        color: black;
+        Font-family: Cursive;
+
+      }
+    </style>
+
 </head>
-<body>
-    <script>
-   (function () {
-    const COIN_ID = "coin5";
-    const KEY_READ= "numescape_read";
-    const KEY_COINS= "numescape_coins";
-
-    const read = JSON.parse(localStorage.getItem(KEY_READ) || "{}");
-    if (!read[COIN_ID]) {
-      read[COIN_ID] = true;
-      localStorage.setItem(KEY_READ, JSON.stringify(read));
-      const coins = Number(localStorage.getItem(KEY_COINS) || 0) + 1;
-      localStorage.setItem(KEY_COINS, String(coins));
-    } 
-
-  }) ();
-</script>
+<body background="grunge-vintage-old-paper-background.jpg">
+   
 
 
 now lets talk about our fifth coin which is: <br>
 
-<H1>LYDIAN ELECTRUM STATER</H1> <br> 
+<H1>Lydian Electrum Stater </H1> <br> 
+<h2>
 -it was one the world's first coins, struck in native electrum(alloy of gold-silver). <br> 
 -it typically showed a lion or lion-bull design associated with royal authority. <br> 
 -it pioneered denominations like trite and hekte for practicality. <br> 
 -however variablility in elctrum composition complicated percise valuation <br> 
 -it set the pattern for stamped, state-guarenteed money. <br>
+</h2>
+
+<a href="page2.html"> Return to home page </a>
 </body>
 </html>

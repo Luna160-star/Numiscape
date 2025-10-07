@@ -5,31 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="page2css.css">
-</head>
-<body>
-    <body class="paper-bg">
 
-      <img src="numi
+    <STYLE>
+        H1{
+           text-align: center;
+           font-size: 50px;
+        }
+
+        h2{
+            text-align: center;
+            padding-top: 0%;
+        }
+    </STYLE>
+
+<head>
+<body>
+
+    <h1>NUMISCAPEE!</h1>
+    <h2> your little pocket of numismatics </h2>
+
+
+    <body class="paper-bg">
     <main class="content">
      <section="stack">
 
-         <div class="wallet">
-  <span class="wallet-emoji">🪙</span>
+<div class="wallet">
+  <span class="wallet-emoji"> &#128178</span>
   <span id="coinCount">0</span>
   <button id="openWellBtn" class="btn">Toss in Well</button>
-         </div>
+</div>
 
-       <div id="wellModal" class="well-modal" aria-hidden="true">
-       <div class="well-dialog">
-        <button class="close" id="closeWellBtn" aria-label="Close">✕</button>
-       <div class="well-graphic">
+<div id="wellType" class="well-type" aria-hidden="true">
+  <div class="well-dialog">
+    <button class="close" id="closeWellBtn" aria-label="Close">✕</button>
+    <div class="well-design">
       <div class="well-mouth"></div>
-      <div class="coin-fall" id="coinAnim">🪙</div>
+      <div class="coin-fall" id="coinAnim"> 💸 </div>
     </div>
     <button id="tossBtn" class="btn primary">Toss 1 coin</button>
     <p id="factText" class="fact"></p>
-     </div>
-     </div>
+  </div>
+</div>
+
+  
 
 
 
@@ -37,128 +55,60 @@
 
 
         <div class="row">
-            <div class="column">
-                <a href="img1.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 1" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img1.html">1. <img src="image1.png" alt="Coin 1" class="coin"/> </a>
             </div>
 
-            <div class="column">
-                <a href="img2.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 2" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img2.html"> 2.<img src="image2.png" alt="Coin 2" class="coin"/> </a>
             </div>
 
-            <div class="column">
-                <a href="img3.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 3" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img3.html"> 3. <img src="image3.png" alt="Coin 3" class="coin"/> </a>
             </div>
             
-            <div class="column">
-               <a href="img4.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin4" class="coin"/> </a>
+            <div class="column coin-tile">
+               <a href="img4.html">4. <img src="image4.png" alt="Coin4" class="coin"/> </a>
             </div>
             
-            <div class="column">
-                <a href="img5.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 5" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img5.html"> 5. <img src="image5.png" alt="Coin 5" class="coin"/> </a>
             </div>
 
             <div class="break"></div>
 
-            <div class="column">
-               <a href="img6.html"><img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 6" class="coin"/> </a>
+            <div class="column coin-tile">
+               <a href="img6.html"> 6. <img src="image6.png" alt="Coin 6" class="coin"/> </a>
             </div>
 
-            <div class="column">
-               <a href="img7.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 7" class="coin"/> </a>
+            <div class="column coin-tile">
+               <a href="img7.html"> 7. <img src="image7.png" alt="Coin 7" class="coin"/> </a>
             </div>
 
-            <div class="column">
-               <a href="img8.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 8" class="coin"/> </a>
+            <div class="column coin-tile">
+               <a href="img8.html"> 8. <img src="image8.png" alt="Coin 8" class="coin"/> </a>
             </div>
  
-            <div class="column">
-                <a href="img9.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="Coin 9" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img9.html"> 9. <img src="image9.png" alt="Coin 9" class="coin"/> </a>
             </div>
 
-            <div class="column">
-                <a href="img10.html"> <img src="Gemini_Generated_Image_s0k6fys0k6fys0k6.png" alt="COin 10" class="coin"/> </a>
+            <div class="column coin-tile">
+                <a href="img10.html"> 10. <img src="image10.png" alt="COin 10" class="coin"/> </a>
             </div>
 
 
     </section>
 
     </main>
-    </body>
-
-    <script>
-  (function () {
-    const KEY_COINS = "numescape_coins";
-    const coinCountEl = document.getElementById("coinCount");
-    const wellModal = document.getElementById("wellModal");
-    const openBtn = document.getElementById("openWellBtn");
-    const closeBtn = document.getElementById("closeWellBtn");
-    const tossBtn = document.getElementById("tossBtn");
-    const coinAnim = document.getElementById("coinAnim");
-    const factText = document.getElementById("factText");
-
-    const SPEND_COST = true; // set to false to make tossing free while testing
-
-    const facts = [
-      "Ancient coins often reveal trade routes through their metal sources.",
-      "The first mechanically minted coins appeared in 16th‑century Europe.",
-      "Edge lettering was invented to deter coin clipping fraud.",
-      "Electrum, a natural gold‑silver alloy, was used in early Lydian coins.",
-      "Portraits on coins spread political messages across empires.",
-      "Hammered coinage was standard before screw‑press technology."
-    ];
-
-    function getCoins() { return Number(localStorage.getItem(KEY_COINS) || 0); }
-    function setCoins(n) { localStorage.setItem(KEY_COINS, String(n)); render(); }
-    function render() {
-      coinCountEl.textContent = getCoins();
-      tossBtn.disabled = (getCoins() <= 0 && SPEND_COST);
-    }
-
-    function openWell() { wellModal.classList.add("show"); wellModal.setAttribute("aria-hidden", "false"); }
-    function closeWell() { wellModal.classList.remove("show"); wellModal.setAttribute("aria-hidden", "true"); factText.textContent = ""; coinAnim.classList.remove("drop"); }
-
-    openBtn.addEventListener("click", openWell);
-    closeBtn.addEventListener("click", closeWell);
-    wellModal.addEventListener("click", (e) => { if (e.target === wellModal) closeWell(); });
-
-    tossBtn.addEventListener("click", () => {
-      if (SPEND_COST && getCoins() <= 0) return;
-      if (SPEND_COST) setCoins(getCoins() - 1);
-
-      coinAnim.classList.remove("drop");
-      void coinAnim.offsetWidth; // restart animation
-      coinAnim.classList.add("drop");
-
-      setTimeout(() => {
-        const pick = facts[Math.floor(Math.random() * facts.length)];
-        factText.textContent = pick;
-      }, 900);
-    });
-
-    render();
-  })();
-</script>
+  
+<h2>
+    Welcome to Numiscope, choose any coin image to read about it.
+    You earn coins when you do so, make sure to spend it on coin well and learn some cool facts about history!
+</h2>
 
 
-<b> Helllo everyonee, welcome to Numiscapee!! </b>
-You own little pocket place of ancient coin history.
-
-Okay, im so excited for thiss
-
-<div class="text">
-
-Let me instrouce you all to "NUMISCAPEEEE", Your own little picket of coin historyy.
-The website (made with love in a little hurryyy) is a small space for histroy about coins
-
-In this website, you can explore about coins and their ancient historyy!<br>
-You can read about the history of each coin by clicking on themm and each time you click and learn about the Coin
-you earn a single coin. <br>
-with each coin, you can toss in the coin well and learn some random history factsss!
-
-ENJOYY!!
-</div>
-
-
+ <script src="page2.js"></script>
 
 </body>
 </html>
