@@ -18,7 +18,8 @@ Working featuress:
 
 HOPE YOU ALL LIKE MY SITEE <333
 
-<br>
+<hr>
+<h3>
 I am addin this so late ik but a note, because now i know how to type a readme (trust) <br>
 Note: This was my first project actually committing, using github or something, so i hope the large commit make sense, since 
 ive made sense on how to commit and when, i think im doing good, i will improve over time, thank you!
@@ -27,3 +28,4 @@ ive made sense on how to commit and when, i think im doing good, i will improve 
 
 Also, my js was made with help with AI (a lot of help tbh), but i think its under 30%, a tiny bit of it was used in css.
 Thank you!
+</h3>
